@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-03-29",
+  "goal": "Final RAG data package for rare-disease clinical QA and hallucination reduction",
+  "recommended_pipeline": {
+    "retriever": "biomedical embedding model + hybrid BM25",
+    "reranker": "cross-encoder medical reranker",
+    "chunking": {
+      "target_tokens": 400,
+      "overlap_tokens": 80,
+      "notes": "Keep PMID, disease IDs, and ontology IDs in metadata"
+    }
+  },
+  "rag_train_corpus": [
+    {
+      "name": "PubMed RAG chunks",
+      "path": "pubmed/pubmed_rag_data/rag_chunks.json",
+      "format": "json-array",
+      "estimated_records": 62386,
+      "field_mapping": {
+        "doc_id": "id",
+        "text": "text",
+        "title": "title",
+        "source_id": "pmid",
+        "metadata": "metadata"
+      },
+      "use": "primary_retrieval_corpus"
+    },
+    {
+      "name": "Rare disease case reports",
+      "path": "RDS.json",
+      "format": "jsonl",
+      "estimated_records": 49760,
+      "field_mapping": {
+        "doc_id": "_id",
+        "text": "case_report",
+        "label": "diagnosis",
+        "disease_name": "Orpha_name",
+        "disease_id": "Orpha_id",
+        "sex": "gender",
+        "age": "age"
+      },
+      "use": "clinical_case_retrieval"
+    },
+    {
+      "name": "PubMed article abstracts",
+      "path": "pubmed/pubmed_rag_data/pubmed_articles.json",
+      "format": "json-array",
+      "estimated_records": 1988,
+      "field_mapping": {
+        "source_id": "pmid",
+        "title": "title",
+        "text": "abstract",
+        "metadata": "journal,date,mesh_terms,hpo_terms,omim_ids"
+      },
+      "use": "fallback_context_and_citation"
+    },
+    {
+      "name": "GARD Rare Disease Reference List",
+      "path": "resources/corpora/gard/GARD_Rare_Disease_List_Feb2026_v3.csv",
+      "format": "csv",
+      "estimated_records": 15512,
+      "field_mapping": {
+        "doc_id": "ID",
+        "title": "DisplayName",
+        "synonyms": "Synonyms (pipe-separated)",
+        "url": "URL"
+      },
+      "use": "disease_dictionary_and_synonym_expansion"
+    },
+    {
+      "name": "UMLS Rare Disease Concepts",
+      "path": "resources/ontologies/umls/extracted/umls_rare_disease_concepts.json",
+      "format": "json",
+      "estimated_records": 335,
+      "field_mapping": {
+        "doc_id": "cui",
+        "title": "name",
+        "text": "definitions",
+        "semantic_types": "semantic_types"
+      },
+      "use": "unified_medical_concept_knowledge"
+    }
+  ],
+  "grounding_knowledge": [
+    {
+      "name": "HPO ontology",
+      "path": "resources/ontologies/hpo/hp.obo",
+      "format": "obo",
+      "use": "phenotype_normalization"
+    },
+    {
+      "name": "HPO phenotype annotations",
+      "path": "resources/ontologies/hpo/phenotype.hpoa",
+      "format": "tsv",
+      "use": "disease_phenotype_linking"
+    },
+    {
+      "name": "Genes to phenotype",
+      "path": "resources/ontologies/hpo/genes_to_phenotype.txt",
+      "format": "tsv",
+      "use": "gene_phenotype_grounding"
+    },
+    {
+      "name": "Phenotype to genes",
+      "path": "resources/ontologies/hpo/phenotype_to_genes.txt",
+      "format": "tsv",
+      "use": "reverse_lookup"
+    },
+    {
+      "name": "Mondo ontology",
+      "path": "resources/ontologies/mondo/mondo.obo",
+      "format": "obo",
+      "use": "cross_terminology_mapping"
+    },
+    {
+      "name": "ORDO ontology",
+      "path": "resources/ontologies/ordo/ORDO_en_4.8.owl",
+      "format": "owl",
+      "use": "rare_disease_taxonomy"
+    },
+    {
+      "name": "RareBench disease mapping",
+      "path": "resources/benchmarks/rarebench/RareBench_HF/mapping/disease_mapping.json",
+      "format": "json",
+      "use": "ID_to_name_mapping_for_eval"
+    },
+    {
+      "name": "RareBench phenotype mapping",
+      "path": "resources/benchmarks/rarebench/RareBench_HF/mapping/phenotype_mapping.json",
+      "format": "json",
+      "use": "HP_code_to_name_mapping"
+    },
+    {
+      "name": "GARD disease dictionary",
+      "path": "resources/corpora/gard/GARD_Rare_Disease_List_Feb2026_v3.csv",
+      "format": "csv",
+      "use": "rare_disease_name_normalization_and_synonym_expansion"
+    },
+    {
+      "name": "UMLS Metathesaurus Concepts",
+      "path": "resources/ontologies/umls/extracted/umls_rare_disease_concepts.json",
+      "format": "json",
+      "use": "CUI_normalization_and_semantic_typing"
+    }
+  ],
+  "rag_eval_sets": [
+    {
+      "name": "RareBench RAMEDIS",
+      "path": "resources/benchmarks/rarebench/RareBench_HF/data/data/RAMEDIS.jsonl",
+      "records": 624,
+      "task": "rare_disease_retrieval_plus_diagnosis"
+    },
+    {
+      "name": "RareBench MME",
+      "path": "resources/benchmarks/rarebench/RareBench_HF/data/data/MME.jsonl",
+      "records": 40,
+      "task": "cross_source_generalization"
+    },
+    {
+      "name": "RareBench HMS",
+      "path": "resources/benchmarks/rarebench/RareBench_HF/data/data/HMS.jsonl",
+      "records": 88,
+      "task": "small_set_precision"
+    },
+    {
+      "name": "RareBench LIRICAL",
+      "path": "resources/benchmarks/rarebench/RareBench_HF/data/data/LIRICAL.jsonl",
+      "records": 370,
+      "task": "phenotype_driven_differential"
+    }
+  ],
+  "data_quality_rules": [
+    "Drop empty text, empty diagnosis, and duplicate document IDs",
+    "Keep a normalized ID namespace: ORPHA, OMIM, HPO, MONDO",
+    "Filter noisy HPO term matches from plain adjectives when confidence < threshold",
+    "Store retriever metadata: source, date, journal, disease_ids, phenotype_ids",
+    "Track citation provenance for every generated answer"
+  ]
+}

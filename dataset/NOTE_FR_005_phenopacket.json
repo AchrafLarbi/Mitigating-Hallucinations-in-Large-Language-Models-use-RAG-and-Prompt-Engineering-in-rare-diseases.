@@ -1,0 +1,198 @@
+{
+  "id": "phenopacket-NOTE_FR_005",
+  "subject": {
+    "id": "NOTE_FR_005",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P2Y"
+      }
+    }
+  },
+  "input": "Compte Rendu d'hospitalisation (cure d'immunoglobuline)\nLe nourrisson Abdoune Lyne Hasnia, âgée de 2 ans et 2 mois, originaire et demeurant à Saida, issue d'un couple jeune consanguins du 2eme degré, suivie à notre niveau pour la prise en charge d'un déficit immunitaire primitif combiné sévère type HLADR depuis juin 2025, admise ce jour pour la cure d'immunoglobuline N 12.\nDiagnostic principal : déficit immunitaire primitif DIP type HLADR\nDiagnostics associés : aucun\nDate du diagnostic : juin 2025\nÉléments de diagnostic :\nClinique :\nInfections respiratoires à répétition depuis l'âge de 03 mois\nDiarrhées chroniques\nRetard staturo-pondéral\nParaclinique :\nBilan immunologique : déficit en molécules HLA de classe II\nDéficit profond en lymphocytes T CD4+\nTraitement en cours :\nBactrim prophylactique\nCures d'immunoglobulines mensuelles\nEXAMEN CLINIQUE À L'ADMISSION :\nPoids: 08,500 kg (-2,5 DS) Taille: 79 cm (-2,1 DS)\nMalnutrition modérée\nÉtat général conservé, apyrétique T : 36.8° C\nExamen de la peau : pâleur cutanéo-muqueuse modérée, pas de lésions cutanées\nExamen ORL : gorge propre, pas d'ADP\nExamen pleuro pulmonaire : FR : 28 c/min, pas de signes de détresse respiratoire\nAuscultation : quelques râles bronchiques bilatéraux\nSPO2 : 97% sous AA\nExamen cardiovasculaire : FC : 120 b/min, B1B2 audibles, pas de souffles\nExamen abdominal : souple, transit conservé, pas d'organomégalie\nNFS : GB: 6500 (PNN: 3200 Lymph: 1800) Hb: 10.5 g/dl Plaquettes: 250000\nCRP : négative\n",
+  "target": "MHC class II deficiency",
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0004430",
+        "label": "Severe combined immunodeficiency",
+        "umls_cui": "C0085110"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_005",
+            "description": "NER: déficit immunitaire primitif combiné sévère type HLADR (0.471) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002205",
+        "label": "Recurrent respiratory infections",
+        "umls_cui": "C3806482"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_005",
+            "description": "NER: Infections respiratoires à répétition (0.480) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002035",
+        "label": "Chronic diarrhea",
+        "umls_cui": "C0034888"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_005",
+            "description": "NER: Diarrhées chroniques (0.434) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive",
+        "umls_cui": "C0231246"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_005",
+            "description": "NER: Malnutrition modérée (0.461) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000980",
+        "label": "Pallor",
+        "umls_cui": "C0030232"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_005",
+            "description": "NER: pâleur cutanéo-muqueuse modérée (0.641) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001903",
+        "label": "Anemia"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_005",
+            "description": "Numeric: Hb: 10.5 g/dl → Hemoglobin < 12.0 g/dL"
+          }
+        }
+      ]
+    }
+  ],
+  "metaData": {
+    "created": "2026-05-22T11:57:59Z",
+    "createdBy": "clinical-preanalysis-pipeline-v2",
+    "phenopacketSchemaVersion": "2.0",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-04-26",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interpretation-NOTE_FR_005",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "ORPHA:572",
+          "label": "MHC class II deficiency"
+        },
+        "score": 0.5455,
+        "allCandidates": [
+          {
+            "id": "ORPHA:572",
+            "label": "MHC class II deficiency",
+            "score": 0.5455
+          },
+          {
+            "id": "ORPHA:183660",
+            "label": "Severe combined immunodeficiency",
+            "score": 0.375
+          },
+          {
+            "id": "ORPHA:586",
+            "label": "Cystic fibrosis",
+            "score": 0.3143
+          },
+          {
+            "id": "ORPHA:47",
+            "label": "X-linked agammaglobulinemia",
+            "score": 0.1624
+          },
+          {
+            "id": "ORPHA:94065",
+            "label": "Gaucher disease type 1",
+            "score": 0.1364
+          }
+        ]
+      }
+    }
+  ],
+  "_pipelineStats": {
+    "totalEntities": 17,
+    "matchedHPO": 5,
+    "unmatchedEntities": 12,
+    "phenopacketFeatures": 6,
+    "negatedFeatures": 0,
+    "numericPhenotypes": 1,
+    "ordoCandidates": 5
+  }
+}

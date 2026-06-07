@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-03-29",
+  "goal": "Final prompt-engineering data package for rare-disease medical reasoning",
+  "pe_train_sets": [
+    {
+      "name": "CoT Rare20Conditions",
+      "path": "CoT_Rare20Conditions_9.8k.json",
+      "format": "json-array",
+      "records": 9800,
+      "field_mapping": {
+        "instruction": "question",
+        "response": "answer",
+        "metadata": "metadata"
+      },
+      "use": "primary_cot_supervised_finetuning"
+    },
+    {
+      "name": "MedMCQA train",
+      "path": "resources/benchmarks/medmcqa/medmcqa_train.json",
+      "format": "json-array",
+      "records": 182822,
+      "field_mapping": {
+        "question": "question",
+        "options": "opa,opb,opc,opd",
+        "correct_option_index": "cop",
+        "rationale": "exp"
+      },
+      "use": "medical_reasoning_mcq_training"
+    },
+    {
+      "name": "MedQA train",
+      "path": "resources/benchmarks/medqa/medqa_train.json",
+      "format": "json-array",
+      "records": 10178,
+      "field_mapping": {
+        "question": "question",
+        "options": "options",
+        "answer": "answer or answer_idx",
+        "meta": "meta_info"
+      },
+      "use": "usmle_style_reasoning"
+    },
+    {
+      "name": "PubMedQA train",
+      "path": "resources/benchmarks/pubmedqa/pubmedqa_train.json",
+      "format": "json-array",
+      "records": 1000,
+      "field_mapping": {
+        "question": "question",
+        "context": "context.contexts",
+        "labels": "context.labels",
+        "answer": "final_decision"
+      },
+      "use": "evidence_grounded_yes_no_maybe_reasoning"
+    }
+  ],
+  "pe_eval_sets": [
+    {
+      "name": "MedQA test",
+      "path": "resources/benchmarks/medqa/medqa_test.json",
+      "records": 1273,
+      "task": "medical_qa_generalization"
+    },
+    {
+      "name": "MedMCQA validation",
+      "path": "resources/benchmarks/medmcqa/medmcqa_validation.json",
+      "records": 4183,
+      "task": "hyperparameter_selection"
+    },
+    {
+      "name": "MedMCQA test",
+      "path": "resources/benchmarks/medmcqa/medmcqa_test.json",
+      "records": 6150,
+      "task": "heldout_medical_mcq_eval"
+    },
+    {
+      "name": "RareBench all public splits",
+      "path": "resources/benchmarks/rarebench/RareBench_HF/data/data/*.jsonl",
+      "records": 1122,
+      "task": "rare_disease_specialized_eval"
+    }
+  ],
+  "prompt_templates_recommended": [
+    {
+      "name": "cot_differential_diagnosis",
+      "template": "Given phenotype evidence and retrieved context, produce top-5 differential diagnoses with confidence and cite source IDs.",
+      "best_for": "rare_disease_long_form_reasoning"
+    },
+    {
+      "name": "react_retrieve_then_reason",
+      "template": "First decide what to retrieve (HPO/OMIM/ORDO/PubMed), then answer with evidence-backed reasoning and uncertainty.",
+      "best_for": "hallucination_control"
+    },
+    {
+      "name": "strict_citation_mode",
+      "template": "Every claim must include one source id (PMID, ORPHA, OMIM or HPO). If unavailable, state insufficient evidence.",
+      "best_for": "safety_critical_medical_outputs"
+    }
+  ],
+  "training_recipe": {
+    "stage_1": "SFT on CoT_Rare20Conditions + MedQA/MedMCQA rationale subsets",
+    "stage_2": "Instruction tuning with strict citation templates",
+    "stage_3": "Evaluate on RareBench, MedQA test, MedMCQA test, PubMedQA",
+    "stage_4": "Error analysis: hallucination type (intrinsic/extrinsic) and retrieval miss"
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "id": "phenopacket-NOTE_FR_002",
+  "subject": {
+    "id": "NOTE_FR_002",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P09Y"
+      }
+    }
+  },
+  "input": "Compte Rendu de REhospitalisation HDJ\n      L'enfant Amroun Abdel Aziz, âgé de 09 ans originaire de Chlef et demeurant à Oran, suivi dans notre service depuis 11/01/2021 pour un déficit immunitaire primitif type syndrome de Wiskott Aldrich, compliqué d'une dilatation des bronches DDB cylindrique et insuffisance respiratoire chronique stade 1. Admis le 12/03/2026 pour sa cure 53 d'immunoglobulines.\nDiagnostic principal : DIP type Wiskott Aldrich\nDate de diagnostic : 05/2020\nÉléments de diagnostic :\nClinique : Eczéma depuis l'âge de 10 jours, thrombopénie avec micro plaquettes, infections respiratoires à répétition.\nParaclinique :\nBilan immunologique : IgG 6,49 g/l, IgA 0,67 g/l, IgM 0,17 g/l, IgE 1290 UI/ml (élevée)\nÉtude génétique : mutation du gène WASP confirmée.\nTraitement en cours :\n- Itraconazole 5mg/kg/jour\n- Bactrim prophylactique 25mg/kg/jour\n- Kinésithérapie respiratoire quotidienne\n- Cures d'immunoglobulines mensuelles (0,8g/kg)\nRetentissement de la maladie :\nSur le plan nutritionnel : Poids: 24,500 kg (-1 DS), Taille :127 cm (-0,7 DS), IMC: 15,3 (-0,9DS). Malnutrition légère.\nSur le plan respiratoire : DDB cylindrique bilatérale, insuffisance respiratoire chronique stade 1.\nSur le plan cutané : Eczéma modéré contrôlé sous émollients.\nEXAMEN CLINIQUE À L'ADMISSION : Date : 12/03/2026\nÉtat général conservé, apyrétique : T : 36,5°C.\nExamen de la peau : eczéma résiduel aux plis, ecchymoses multiples, pas de pétéchies.\nExamen ORL : pas d'ADP cervicales.\nExamen pleuro pulmonaire : FR : 20 c/min. Auscultation : râles polymorphes.\nExamen cardiovasculaire : FC : 98 bpm, pas de souffle ni BSA.\nExamen de l'abdomen : souple, pas d'organomégalie.\nNFS : GB : 7400 (PNN : 5700 Lymph : 1200) Hb : 10.6 g/dl Plaquette : 90 000 éléments/ul\nCRP : négative\n",
+  "target": "Wiskott-Aldrich syndrome",
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0004430",
+        "label": "Immunodeficiency",
+        "umls_cui": "C0085110"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: déficit immunitaire primitif (0.593) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002665",
+        "label": "Lymphoma",
+        "umls_cui": "C0024299"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: syndrome de Wiskott Aldrich (0.570) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002093",
+        "label": "Respiratory insufficiency",
+        "umls_cui": "C0035229"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: insuffisance respiratoire chronique stade 1 (0.603) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000964",
+        "label": "Eczema",
+        "umls_cui": "C0013595"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: Eczéma (0.870) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001873",
+        "label": "Thrombocytopenia",
+        "umls_cui": "C0040034"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: thrombopénie (0.684) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002205",
+        "label": "Recurrent respiratory infections",
+        "umls_cui": "C3806482"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: infections respiratoires à répétition (0.717) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002110",
+        "label": "Bronchiectasis",
+        "umls_cui": "C0006267"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: DDB cylindrique bilatérale (0.496) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000978",
+        "label": "Bruising susceptibility",
+        "umls_cui": "C0013491"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: ecchymoses multiples (0.834) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000967",
+        "label": "Petechiae",
+        "umls_cui": "C0031256"
+      },
+      "excluded": true,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: pétéchies (0.773) | Match: french_exact (0.950) | Negated by: \"pas de\""
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002835",
+        "label": "Aspiration",
+        "umls_cui": "C0700198"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "NER: râles polymorphes (0.859) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001903",
+        "label": "Anemia"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "Numeric: Hb : 10.6 g/dl → Hemoglobin < 12.0 g/dL"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001888",
+        "label": "Lymphopenia"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_002",
+            "description": "Numeric: Lymph : 1200 → ALC/Lymphocytes < 1500/uL"
+          }
+        }
+      ]
+    }
+  ],
+  "metaData": {
+    "created": "2026-05-22T11:57:54Z",
+    "createdBy": "clinical-preanalysis-pipeline-v2",
+    "phenopacketSchemaVersion": "2.0",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-04-26",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interpretation-NOTE_FR_002",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "ORPHA:906",
+          "label": "Wiskott-Aldrich syndrome"
+        },
+        "score": 0.5975,
+        "allCandidates": [
+          {
+            "id": "ORPHA:906",
+            "label": "Wiskott-Aldrich syndrome",
+            "score": 0.5975
+          },
+          {
+            "id": "ORPHA:572",
+            "label": "MHC class II deficiency",
+            "score": 0.3024
+          },
+          {
+            "id": "ORPHA:94065",
+            "label": "Gaucher disease type 1",
+            "score": 0.25
+          },
+          {
+            "id": "ORPHA:47",
+            "label": "X-linked agammaglobulinemia",
+            "score": 0.2236
+          },
+          {
+            "id": "ORPHA:183660",
+            "label": "Severe combined immunodeficiency",
+            "score": 0.2167
+          }
+        ]
+      }
+    }
+  ],
+  "_pipelineStats": {
+    "totalEntities": 26,
+    "matchedHPO": 12,
+    "unmatchedEntities": 14,
+    "phenopacketFeatures": 12,
+    "negatedFeatures": 1,
+    "numericPhenotypes": 3,
+    "ordoCandidates": 5
+  }
+}

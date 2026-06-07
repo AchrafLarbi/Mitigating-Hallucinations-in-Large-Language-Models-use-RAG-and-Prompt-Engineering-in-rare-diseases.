@@ -1,0 +1,375 @@
+{
+  "id": "phenopacket-NOTE_FR_001",
+  "subject": {
+    "id": "NOTE_FR_001",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P04Y"
+      }
+    }
+  },
+  "input": "Compte rendu d'hospitalisation\n      L'enfant ABDELLAOUI MOHAMED YANIS âgé de 04 ans et demi originaire et demeurant à Oran, suivi depuis l'âge de 03 mois pour une mucoviscidose à double expression phénotypique respiratoire et digestive, réadmis pour exacerbation modérée à Pseudomonas Aeruginosa.\nANTECEDENTS :\nFamiliaux :\n- Père : 41ans ; BES.\n- Mère : 27 ans, BES.\n- Consanguinité de 2eme degré.\nPersonnels :\nGrossesse : bien suivie\nAccouchement : par VB à terme.\nAllaitement maternel jusqu'à 06 mois puis artificiel\nDiversification alimentaire : 06 mois.\nVaccination : faite correctement\nPathologique :\nDepuis l'âge de 03 mois : encombrement bronchique chronique, toux grasse persistante, infections respiratoires à répétition.\nDiarrhée chronique graisseuse avec ballonnement abdominal et retard pondéral.\nDiagnostic principal : Mucoviscidose\nDate de diagnostic : 2022\nÉléments de diagnostic :\nTest de la sueur positif :\n01er Test 26/09/2011 (Avant-bras Gauche) 82 mg 81 meq/l\n02ème Test 29/11/2011 (Avant-bras Droit) 216 mg 93 meq/l\nÉtude génétique : 31/01/2012 : mutation homozygote p.F508del\nElastase fécale 26/03/2025 : 1,8ug/ insuffisance pancréatique exocrine\nTraitement en cours :\n- Kinésithérapie respiratoire à domicile biquotidienne\n- Nébulisation hypertonique\n- Nébulisation par Colistine 2 fois par jour un mois sur 2\n- Créon 12000 UI (520UI/Kg)\n- Vit K 10 mg/15j, Vit D amp/3 mois, Vit E 1cp/j\nHISTOIRE DE LA MALADIE :\nLe début des signes remonte 15 jours auparavant par accentuation de la toux devenant gênante, modification des crachats qui sont devenus verdâtres et épais, avec asthénie et diminution de l'appétit d'où son admission.\nEXAMEN CLINIQUE À L'ADMISSION : Date : 24/03/2026\nMesures anthropométriques :\nPoids : 13,600 kg (-1,79 DS). Taille : 100 cm (-1,43 DS). IMC: 13,6 kg/m2 (-1,4 DS).\nÉtat général moyen, fébrile : T : 38,7° C, malnutrition légère.\nExamen de la peau : Pâleur cutanée, pas d'ictère, ni syndrome hémorragique.\nExamen ORL : rhinite allergique\nExamen pleuro pulmonaire : FR : 30 c/min, quintes de Toux grasses, Auscultation, râles ronflants bilatéraux, murmures vésiculaires bien transmis dans les 2 champs pulmonaires. Pas de signes d'insuffisance respiratoire chronique (pas d'hippocratisme digital). SPO2 : 96% sous AA.\nExamen cardiovasculaire : FC : 100 bpm, Auscultation : B1B2 audibles, pas de souffle ni BSA.\nExamen de l'abdomen: souple, transit conservé, pas d'organomégalie.\nBILAN PARACLINIQUE :\nNFS : GB : 12500 éléments/ul (PNN : 9200 Lymph : 2800) Hb : 11.2 g/dl Plaquette : 280 000\nCRP : 45 mg/L\nECBC : Pseudomonas Aeruginosa sensible à la Colistine et Ciprofloxacine.\n",
+  "target": "Cystic fibrosis",
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0006538",
+        "label": "Recurrent bronchopulmonary infections",
+        "umls_cui": "C2169795"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: mucoviscidose (0.792) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002205",
+        "label": "Recurrent respiratory infections",
+        "umls_cui": "C3806482"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: infections respiratoires à répétition (0.683) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002035",
+        "label": "Chronic diarrhea",
+        "umls_cui": "C0034888"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: Diarrhée chronique graisseuse (0.806) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0003270",
+        "label": "Abdominal distention",
+        "umls_cui": "C0000731"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: ballonnement abdominal (0.858) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001508",
+        "label": "Failure to thrive",
+        "umls_cui": "C0231246"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: retard pondéral (0.800) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0004395",
+        "label": "Malnutrition",
+        "umls_cui": "C0162429"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: diminution de l'appétit (0.671) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0003193",
+        "label": "Allergic rhinitis",
+        "umls_cui": "C0847614"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: rhinite allergique (0.686) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002835",
+        "label": "Aspiration",
+        "umls_cui": "C0700198"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: râles ronflants bilatéraux (0.937) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002093",
+        "label": "Respiratory insufficiency",
+        "umls_cui": "C0035229"
+      },
+      "excluded": true,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: insuffisance respiratoire chronique (0.843) | Match: french_exact (0.950) | Negated by: \"pas de\""
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001217",
+        "label": "Clubbing",
+        "umls_cui": "C0149651"
+      },
+      "excluded": true,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: hippocratisme digital (0.789) | Match: french_exact (0.950) | Negated by: \"pas de\""
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001438",
+        "label": "Organomegaly",
+        "umls_cui": "C4020869"
+      },
+      "excluded": true,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "NER: organomégalie (0.746) | Match: french_exact (0.950) | Negated by: \"pas d'\""
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001945",
+        "label": "Fever"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "Numeric: T : 38,7° C → Temperature >= 38.0°C"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001903",
+        "label": "Anemia"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "Numeric: Hb : 11.2 g/dl → Hemoglobin < 12.0 g/dL"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001974",
+        "label": "Leukocytosis"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "Numeric: GB : 12500 éléments/ul → WBC/GB > 11,000 elements/uL"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0011227",
+        "label": "Elevated C-reactive protein"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_001",
+            "description": "Numeric: CRP : 45 mg/L → CRP > 10 mg/L (inflammation)"
+          }
+        }
+      ]
+    }
+  ],
+  "metaData": {
+    "created": "2026-05-22T11:57:52Z",
+    "createdBy": "clinical-preanalysis-pipeline-v2",
+    "phenopacketSchemaVersion": "2.0",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-04-26",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interpretation-NOTE_FR_001",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "ORPHA:586",
+          "label": "Cystic fibrosis"
+        },
+        "score": 0.49,
+        "allCandidates": [
+          {
+            "id": "ORPHA:586",
+            "label": "Cystic fibrosis",
+            "score": 0.49
+          },
+          {
+            "id": "ORPHA:572",
+            "label": "MHC class II deficiency",
+            "score": 0.368
+          },
+          {
+            "id": "ORPHA:232",
+            "label": "Sickle cell disease",
+            "score": 0.285
+          },
+          {
+            "id": "ORPHA:2314",
+            "label": "Hyper-IgE syndrome",
+            "score": 0.285
+          },
+          {
+            "id": "ORPHA:183660",
+            "label": "Severe combined immunodeficiency",
+            "score": 0.2644
+          }
+        ]
+      }
+    }
+  ],
+  "_pipelineStats": {
+    "totalEntities": 34,
+    "matchedHPO": 15,
+    "unmatchedEntities": 19,
+    "phenopacketFeatures": 15,
+    "negatedFeatures": 3,
+    "numericPhenotypes": 4,
+    "ordoCandidates": 5
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "rag_corpus_final": 130316,
+  "pe_sft_final": 203800,
+  "eval_final": 12728,
+  "outputs": {
+    "rag": "resources/final_ready/rag_corpus_final.jsonl",
+    "pe": "resources/final_ready/pe_sft_final.jsonl",
+    "eval": "resources/final_ready/eval_final.jsonl"
+  },
+  "gard_appended": 15512,
+  "umls_appended": 335
+}

@@ -1,0 +1,357 @@
+{
+  "id": "phenopacket-NOTE_FR_004",
+  "subject": {
+    "id": "NOTE_FR_004",
+    "sex": "FEMALE",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P14Y"
+      }
+    }
+  },
+  "input": "FICHE D'HOSPITALISATION:\nIl s'agit du nourrisson Tazi Mimoun Abderrahmane, âgé de 14 mois originaire et demeurant à Saida, issu d'un couple consanguin de 2ème degré, suivi depuis l'âge de 05 mois pour déficit immunitaire combiné sévère atypique, orienté depuis l'EPH de Saida pour complément de suivi et prise en charge d'un Syndrome infectieux.\nANTÉCÉDENTS :\nFamiliaux :\nPère : 41ans, bon état de santé.\nMère : 33ans, bon état de santé.\nFratrie :\nfille décédée en 2016, à l'âge d'un mois dans un tableau eczématiforme généralisé (probablement : greffon contre hôte)\nGarçon décédé en 2017 à l'âge de 05 mois dans un tableau de détresse respiratoire, diarrhée et ballonnement abdominal (SCID-LIKE probable)\nConsanguinité : oui\nPersonnels :\nGrossesse: bien suivie\nAccouchement: à terme par voie haute\nApgar 10/10\nPoids de naissance : 3.9kg\nPathologique :\nPlusieurs hospitalisations pour broncho-pneumopathies à répétition et diarrhées chroniques\nDiagnostic principal : Déficit immunitaire combiné sévère atypique\nDate de diagnostic : 04/2025\nÉléments de diagnostic :\nClinique :\nInfections respiratoires à répétition\nDiarrhées chroniques depuis l'âge de 03 mois\nBallonnement abdominal\nParaclinique :\nBilan de déficit immunitaire (21/04/2025): déficit immunitaire combiné sévère atypique\nTraitement en cours :\nAntibiothérapie cyclique : Bactrim/Augmentin\nNébulisation par pulmicort + asthalin\nEXAMEN CLINIQUE À L'ADMISSION :\nPoids: 06kg600 (-3.67DS) Taille: 67cm (-4.7DS) Malnutrition sévère\nIMC: 14.7 (moins de P3)\nÉtat général : moyen, T° 36.7 c, dextro : 1 g/l\nLégèrement déshydraté\nExamen de la peau :\nlégère pâleur cutanéo muqueuse,\nLésion de BCGite de cicatrisation,\nPas de cicatrices, ni d'abcès\nExamen ORL :\npas de ADP cervicale\nPas de candidose buccale\nExamen pleuro pulmonaire :\nFR 37 c/mn\nLéger tirage sus sternal. SPO2 : 98 % AA\nAuscultation pulmonaire: clair aux 2CP\nPas de signes d'insuffisance respiratoire chronique\nExamen cardiovasculaire :\nFC : 110 b/min.\nAuscultation : B1B2 audibles pas de souffles ni BSA\nExamen digestif :\nabdomen souple ballonné PA:47cm\npas d'organomégalies,\nNotion de diarrhée à raison de 06 selles/jour de couleur normale et d'aspect huileux\nSexe de morphotype masculin\nNFS : GB: 8200 (PNN: 4100 Lymph: 2800) Hb: 9.8 g/dl Plaquettes: 340000\nCRP: 12 mg/L\n",
+  "target": "MHC class II deficiency",
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0004430",
+        "label": "Severe combined immunodeficiency",
+        "umls_cui": "C0085110"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: déficit immunitaire combiné sévère atypique (0.776) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002719",
+        "label": "Recurrent infections",
+        "umls_cui": "C0239998"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: Syndrome infectieux (0.809) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000964",
+        "label": "Eczema",
+        "umls_cui": "C0013595"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: eczématiforme généralisé (0.418) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002098",
+        "label": "Respiratory distress",
+        "umls_cui": "C0013404"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: détresse respiratoire (0.906) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002014",
+        "label": "Diarrhea",
+        "umls_cui": "C0011991"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: diarrhée (0.834) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0003270",
+        "label": "Abdominal distention",
+        "umls_cui": "C0000731"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: ballonnement abdominal (0.920) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002205",
+        "label": "Recurrent respiratory infections",
+        "umls_cui": "C3806482"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: broncho-pneumopathies à répétition (0.798) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002035",
+        "label": "Chronic diarrhea",
+        "umls_cui": "C0034888"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: diarrhées chroniques (0.667) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000980",
+        "label": "Pallor",
+        "umls_cui": "C0030232"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: pâleur cutanéo muqueuse (0.785) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0100699",
+        "label": "Scarring",
+        "umls_cui": "C0008767"
+      },
+      "excluded": true,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: cicatrices (0.585) | Match: sapbert_similarity (0.895) | Negated by: \"pas de\""
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001438",
+        "label": "Organomegaly",
+        "umls_cui": "C4020869"
+      },
+      "excluded": true,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "NER: organomégalies (0.827) | Match: french_partial (0.850) | Negated by: \"pas d'\""
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001943",
+        "label": "Hypoglycemia"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "Numeric: dextro : 1 g/l → Glucose < 70 mg/dL"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001903",
+        "label": "Anemia"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "Numeric: Hb: 9.8 g/dl → Hemoglobin < 12.0 g/dL"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0011227",
+        "label": "Elevated C-reactive protein"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_004",
+            "description": "Numeric: CRP: 12 mg/L → CRP > 10 mg/L (inflammation)"
+          }
+        }
+      ]
+    }
+  ],
+  "metaData": {
+    "created": "2026-05-22T11:57:57Z",
+    "createdBy": "clinical-preanalysis-pipeline-v2",
+    "phenopacketSchemaVersion": "2.0",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-04-26",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interpretation-NOTE_FR_004",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "ORPHA:572",
+          "label": "MHC class II deficiency"
+        },
+        "score": 0.4536,
+        "allCandidates": [
+          {
+            "id": "ORPHA:572",
+            "label": "MHC class II deficiency",
+            "score": 0.4536
+          },
+          {
+            "id": "ORPHA:183660",
+            "label": "Severe combined immunodeficiency",
+            "score": 0.4455
+          },
+          {
+            "id": "ORPHA:586",
+            "label": "Cystic fibrosis",
+            "score": 0.3452
+          },
+          {
+            "id": "ORPHA:906",
+            "label": "Wiskott-Aldrich syndrome",
+            "score": 0.2381
+          },
+          {
+            "id": "ORPHA:47",
+            "label": "X-linked agammaglobulinemia",
+            "score": 0.2182
+          }
+        ]
+      }
+    }
+  ],
+  "_pipelineStats": {
+    "totalEntities": 23,
+    "matchedHPO": 13,
+    "unmatchedEntities": 10,
+    "phenopacketFeatures": 14,
+    "negatedFeatures": 2,
+    "numericPhenotypes": 3,
+    "ordoCandidates": 5
+  }
+}

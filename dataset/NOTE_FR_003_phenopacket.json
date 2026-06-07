@@ -1,0 +1,259 @@
+{
+  "id": "phenopacket-NOTE_FR_003",
+  "subject": {
+    "id": "NOTE_FR_003",
+    "timeAtLastEncounter": {
+      "age": {
+        "iso8601duration": "P9Y"
+      }
+    }
+  },
+  "input": "Fiche de Ré hospitalisation :\nC'est l'enfant AZZEMMOU MAHDI né le 23/04/2016, âgé actuellement de 9 ans et 7 mois, originaire et demeurant à MOSTAGANEM, issu d'un couple non consanguin, suivi à l'EPH BOUGUIRAT MOSTAGANEM depuis 2022 pour un déficit immunitaire primitif type agammaglobulinémie congénitale, hospitalisé à notre niveau ce jour pour la cure d'immunoglobulines N : 43.\nDiagnostic principal : Déficit immunitaire primitif type Agammaglobulinémie congénitale\nDiagnostics associés : Aucun\nDate de diagnostic : 23/08/2022\nÉléments de diagnostic :\nAnamnestiques :\n- Un frère décédé en 2022 dans un tableau de détresse respiratoire au niveau de la réanimation pédiatrique (IMC sur méningite à l'âge de 6 ans)\n- Un oncle maternel décédé à l'âge de 18 mois d'étiologies inconnues.\nClinique :\n- Otites purulentes avec arthrite du genou gauche à répétition depuis l'âge de 5 ans.\n- Toux grasse chronique depuis l'âge de 5 ans.\nParaclinique :\nBilan du déficit immunitaire : fait le 23/08/2022 :\nIgG : 0,33 g/l IgA : 0,26 g/l IgM : 0,181 g/l.\nAbsence de lymphocytes B.\nLe tableau est en faveur d'une Agammaglobulinémie congénitale.\nTraitement en cours :\n- Itraconazole 1cp/j\n- Bactrim 1cp jour par jour\n- Kinésithérapie\nRetentissement de la maladie :\nSur le plan nutritionnel :\nPoids: 28,500 kg (- 0,5 DS). Taille :134 cm (-0,3 DS) IMC: 15,9 (-0,7DS)\nLégère malnutrition\nEXAMEN CLINIQUE À L'ADMISSION : 25/03/2026\nÉtat général conservé, apyrétique : T° 36.7 C, bonne coloration cutanéomuqueuse.\nExamen de la peau : Pas de lésion de cuir chevelu. Présence de cicatrices au niveau du genou gauche.\nExamen ORL : absence d'otorrhée, absence d'otalgie. Gorge propre, caries dentaires.\nExamen pleuro pulmonaire : Toux grasse crachats blanchâtres, pas de déformation thoracique, pas de signe d'insuffisance respiratoire chronique.\nFR : 22 cycles/min, SPO2 :99 % sous air ambiant.\nAuscultation pulmonaire : râles polymorphes aux 2 champs pulmonaires.\nExamen cardiovasculaire : FC : 80 b/min. B1B2 bien audibles, pas de souffle ni BSA.\nExamen abdominal : souple, pas d'organomégalie.\n",
+  "target": "X-linked agammaglobulinemia",
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0004313",
+        "label": "Decreased circulating antibody level",
+        "umls_cui": "C0086438"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: déficit immunitaire primitif type agammaglobulinémie congénitale (0.662) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002098",
+        "label": "Respiratory distress",
+        "umls_cui": "C0013404"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: détresse respiratoire (0.751) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002840",
+        "label": "Non-recurrent bacterial meningitis",
+        "umls_cui": "C0024205"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: méningite (0.450) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0000388",
+        "label": "Otitis media",
+        "umls_cui": "C0029882"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: Otites purulentes (0.873) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001369",
+        "label": "Arthritis",
+        "umls_cui": "C0003864"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: arthrite du genou gauche (0.781) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0006538",
+        "label": "Recurrent bronchopulmonary infections",
+        "umls_cui": "C2169795"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: Toux grasse chronique (0.865) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0002835",
+        "label": "Aspiration",
+        "umls_cui": "C0700198"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: râles polymorphes (0.867) | Match: french_exact (0.950)"
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0001438",
+        "label": "Organomegaly",
+        "umls_cui": "C4020869"
+      },
+      "excluded": true,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: organomégalie (0.815) | Match: french_exact (0.950) | Negated by: \"pas d'\""
+          }
+        }
+      ]
+    },
+    {
+      "type": {
+        "id": "HP:0004430",
+        "label": "Immunodeficiency",
+        "umls_cui": "C0085110"
+      },
+      "excluded": false,
+      "evidence": [
+        {
+          "evidenceCode": {
+            "id": "ECO:0000033",
+            "label": "author statement supported by traceable reference"
+          },
+          "reference": {
+            "id": "NOTE_FR_003",
+            "description": "NER: Bilan du déficit immunitaire (0.506) | Match: french_partial (0.850)"
+          }
+        }
+      ]
+    }
+  ],
+  "metaData": {
+    "created": "2026-05-22T11:57:55Z",
+    "createdBy": "clinical-preanalysis-pipeline-v2",
+    "phenopacketSchemaVersion": "2.0",
+    "resources": [
+      {
+        "id": "hp",
+        "name": "Human Phenotype Ontology",
+        "url": "https://hpo.jax.org",
+        "version": "2024-04-26",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      }
+    ]
+  },
+  "interpretations": [
+    {
+      "id": "interpretation-NOTE_FR_003",
+      "progressStatus": "IN_PROGRESS",
+      "diagnosis": {
+        "disease": {
+          "id": "ORPHA:47",
+          "label": "X-linked agammaglobulinemia"
+        },
+        "score": 0.4987,
+        "allCandidates": [
+          {
+            "id": "ORPHA:47",
+            "label": "X-linked agammaglobulinemia",
+            "score": 0.4987
+          },
+          {
+            "id": "ORPHA:1572",
+            "label": "Common variable immunodeficiency",
+            "score": 0.2286
+          },
+          {
+            "id": "ORPHA:183660",
+            "label": "Severe combined immunodeficiency",
+            "score": 0.1098
+          },
+          {
+            "id": "ORPHA:2314",
+            "label": "Hyper-IgE syndrome",
+            "score": 0.1
+          },
+          {
+            "id": "ORPHA:100",
+            "label": "Ataxia-telangiectasia",
+            "score": 0.0902
+          }
+        ]
+      }
+    }
+  ],
+  "_pipelineStats": {
+    "totalEntities": 23,
+    "matchedHPO": 10,
+    "unmatchedEntities": 13,
+    "phenopacketFeatures": 9,
+    "negatedFeatures": 1,
+    "numericPhenotypes": 0,
+    "ordoCandidates": 5
+  }
+}
